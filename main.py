@@ -11,9 +11,9 @@ ROOMS = {
     },
 }
 ERRORS = {
-    "no_exit": "You cannot go {direction} from here. Look at the room description for the exits.",
-    "error_command": "I don't understand that. Please check the room description.",
-    "wrong_hall":"That is the wrong hall. Please check the text regarding the room.",
+    "no_exit": "You cannot go '{direction}' from here. Look at the room description for the exits.",
+    "no_command": "No command has been entered. Please read the text and check for the command.",
+    "error_command": "That command does not exist. Please read the text and check the command.",
 }
 
 def main():
