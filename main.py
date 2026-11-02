@@ -10,7 +10,11 @@ ROOMS = {
         "exits": {"south": "hall"},
     },
 }
-
+ERRORS = {
+    "no_exit": "You cannot go {direction} from here. Look at the room description for the exits.",
+    "error_command": "I don't understand that. Please check the room description.",
+    "wrong_hall":"That is the wrong hall. Please check the text regarding the room.",
+}
 
 def main():
     current = "hall"
@@ -31,6 +35,7 @@ def main():
                 print("You cannot go that way.")
         else:
             print("I don't understand that.")
+
 
 
 if __name__ == "__main__":
