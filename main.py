@@ -35,8 +35,8 @@ def main():
                 print(ERRORS["no_exit"].format(direction=direction))
         else:
             print("No command has been entered. Please read the text and check for the command.")
-        else:
-            print("That command does not exist. Please read the text and check the command.")
+    else:
+        print("That command does not exist. Please read the text and check the command.")
 
 
 
