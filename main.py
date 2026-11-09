@@ -1,5 +1,6 @@
 """A tiny text adventure. Grow this world with your team!"""
 
+
 ROOMS = {
     "hall": {
         "description": "You are in a quiet hall. A door leads north.",
@@ -19,8 +20,9 @@ ERRORS = {
 COMMANDS = {
     "go <direction>": "move to the next room, like 'go north'",
     "quit": "exit the game",
-    "help": "display available commands"
+    "help": "show this help message",
 }
+
 def main():
     current = "hall"
     print("Welcome! Type 'go <direction>' to move, or 'quit' to stop.")
@@ -38,10 +40,8 @@ def main():
                 current = next_room
             else:
                 print(ERRORS["no_exit"].format(direction=direction))
-        elif command == "help":
-            print("Available commands:")
-            for cmd, description in COMMANDS.items():
-                print(f"  {cmd}: {description}")
+            for command, text in COMMANDS.items():
+                print(f"  {command:<16} {text}")
         else:
             print("No command has been entered. Please read the text and check for the command.")
     else:
